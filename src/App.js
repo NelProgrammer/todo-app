@@ -1,12 +1,15 @@
 import './App.css';
+import Todo from './Todo';
+const DUMMY_TODOS = ['Learn React', 'Practice React', 'Profit!'];
 
 function App() {
+  //const todos = DUMMY_TODOS;
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>The Quick Brown Fox.</p>
-      </header>
-    </div>
+    <ul>
+      {DUMMY_TODOS.map((todoItem) => (
+        <Todo text={todoItem} />
+      ))}
+    </ul>
   );
 }
 
